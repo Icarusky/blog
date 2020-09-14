@@ -1,40 +1,40 @@
 
 
 //
-//  CATEGORY - NBA
+//  CATEGORY - ZAGAN
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-// $page-header-bg-nba: #a93f25; // Spalding orange.
-$page-header-bg-nba: #802e1a; // Spalding orange (darker).
+// $page-header-bg-zagan: #a93f25; // Spalding orange.
+$page-header-bg-zagan: #802e1a; // Spalding orange (darker).
 
-$page-header-nba-icon-color: lighten($page-header-bg-nba, 25%);
-$page-header-nba-icon-shadow: darken($page-header-nba-icon-color, 35%);
+$page-header-zagan-icon-color: lighten($page-header-bg-zagan, 25%);
+$page-header-zagan-icon-shadow: darken($page-header-zagan-icon-color, 35%);
 
 
 //
 //  PAGE HEADER
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-.category-nba {
+.category-zagan {
   .section__page-header {
-    background-color: $page-header-bg-nba;
-    background-image: url('/img/uploads/featured-image-category-nba.png');
+    background-color: $page-header-bg-zagan;
+    background-image: url('/img/uploads/featured-image-category-zagan.png');
   }
 
   .page-header__icon {
-    background-color: $page-header-bg-nba;
-    border-color: $page-header-bg-nba;
+    background-color: $page-header-bg-zagan;
+    border-color: $page-header-bg-zagan;
   }
 
   .section__page-header {
     .page-header__background-device {
       .line {
-        background-color: $page-header-bg-nba;
+        background-color: $page-header-bg-zagan;
       }
     }
   }
 
-  // Make sure NBA is all uppercase.
+  // Make sure zagan is all uppercase.
   .page-header__title {
     text-transform: uppercase;
   }
@@ -45,9 +45,9 @@ $page-header-nba-icon-shadow: darken($page-header-nba-icon-color, 35%);
 //  BASKETBALL ICON
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-.category-nba {
+.category-zagan {
   .page-header__icon {    
-    background: $page-header-bg-nba;
+    background: $page-header-bg-zagan;
 
     .basketball {
       height: 100%;
@@ -58,7 +58,7 @@ $page-header-nba-icon-shadow: darken($page-header-nba-icon-color, 35%);
 
       .outlines {
         path {
-          fill: $page-header-nba-icon-color;
+          fill: $page-header-zagan-icon-color;
         }
       }
 
@@ -71,7 +71,7 @@ $page-header-nba-icon-shadow: darken($page-header-nba-icon-color, 35%);
 
         .outlines {
           path {
-            fill: $page-header-nba-icon-shadow;
+            fill: $page-header-zagan-icon-shadow;
           }
         }
 
@@ -88,7 +88,7 @@ $page-header-nba-icon-shadow: darken($page-header-nba-icon-color, 35%);
 //  BASKETBALL COURT ICON
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-// .category-nba {
+// .category-zagan {
 //   .page-header__icon {
 //     .basketball-court {
 //       position: absolute;

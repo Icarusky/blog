@@ -6,51 +6,51 @@ googleAnalytics: ""
 menu:
   main:
     - Identifier: articles
-      Name: Articles
+      Name: 文章
       URL: /articles/
       Weight: '10'
 
-    - Identifier: design
-      Name: Design
-      URL: /categories/design/
+    - Identifier: physics
+      Name: 物理
+      URL: /categories/physics/
       Weight: '110'
       parent: "articles"
 
-    - Identifier: development
-      Name: Development
-      URL: /categories/development/
+    - Identifier: literature
+      Name: 文学
+      URL: /categories/literature/
       Weight: '120'
       parent: "articles"
 
-    - Identifier: gaming
-      Name: Gaming
-      URL: /categories/gaming/
+    - Identifier: art
+      Name: 艺术
+      URL: /categories/art/
       Weight: '130'
       parent: "articles"
 
-    - Identifier: nba
-      Name: NBA
-      URL: /categories/nba/
+    - Identifier: zagan
+      Name: 杂谈
+      URL: /categories/zagan/
       Weight: '140'
       parent: "articles"
 
     - Identifier: photography
-      Name: Photography
+      Name: 摄影
       URL: /photography/
       Weight: '30'
 
     - Identifier: work
-      Name: Work
+      Name: 工作
       URL: /work/
       Weight: '30'
 
     - Identifier: about
-      Name: About
+      Name: 关于
       URL: /about/
       Weight: '40'
 
     - Identifier: contact
-      Name: Contact
+      Name: 联系
       URL: /contact/
       Weight: '50'
     

@@ -1,32 +1,32 @@
 
 
 //
-//  CATEGORY - DEVELOPMENT
+//  CATEGORY - LITERATURE
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-$page-header-bg-development: #233624;
+$page-header-bg-literature: #233624;
 
-$page-header-development-icon-color: #5dc562;
-$page-header-development-icon-shadow: darken($page-header-development-icon-color, 25%);
+$page-header-literature-icon-color: #5dc562;
+$page-header-literature-icon-shadow: darken($page-header-literature-icon-color, 25%);
 
 
 //
 //  PAGE HEADER
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-.category-development {
+.category-literature {
   .section__page-header {
-    background-color: $page-header-bg-development;
-    background-image: url('/img/uploads/featured-image-category-development.png');
+    background-color: $page-header-bg-literature;
+    background-image: url('/img/uploads/featured-image-category-literature.png');
     background-size: cover;
   }
 
   .page-header__icon {
-    background-color: $page-header-bg-development;
+    background-color: $page-header-bg-literature;
   }
 
   .page-header__icon-wrapper {
-    color: $page-header-development-icon-color;
+    color: $page-header-literature-icon-color;
     font-family: $heading-font-family;
     font-size: rem(40px);
     font-weight: bold;
@@ -35,18 +35,18 @@ $page-header-development-icon-shadow: darken($page-header-development-icon-color
     line-height: 1;
     position: absolute;
     text-align: center;
-    text-shadow: 0 4px 0 $page-header-development-icon-shadow;
-    text-shadow: 0 1px 0 $page-header-development-icon-shadow,
-                 0 2px 0 $page-header-development-icon-shadow,
-                 0 3px 0 $page-header-development-icon-shadow,
-                 0 4px 0 $page-header-development-icon-shadow;
+    text-shadow: 0 4px 0 $page-header-literature-icon-shadow;
+    text-shadow: 0 1px 0 $page-header-literature-icon-shadow,
+                 0 2px 0 $page-header-literature-icon-shadow,
+                 0 3px 0 $page-header-literature-icon-shadow,
+                 0 4px 0 $page-header-literature-icon-shadow;
     top: 50%;
     transform: translateY(-50%) translateX(-50%);
   }
 }
 
 @include respond-above(xs) {
-  .category-development {
+  .category-literature {
     .page-header__icon-wrapper {
       font-size: rem(56px);
     }
@@ -54,7 +54,7 @@ $page-header-development-icon-shadow: darken($page-header-development-icon-color
 }
 
 // @include respond-above(sm) {
-//   .category-development {
+//   .category-literature {
 //     .page-header__icon-wrapper {
 //       // font-size: rem(60px);
 //     }
@@ -62,7 +62,7 @@ $page-header-development-icon-shadow: darken($page-header-development-icon-color
 // }
 
 @include respond-above(lg) {
-  .category-development {
+  .category-literature {
     .page-header__icon-wrapper {
       font-size: rem(64px);
     }

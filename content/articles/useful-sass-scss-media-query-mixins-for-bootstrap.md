@@ -3,7 +3,7 @@ title: Useful Sass (SCSS) media query mixins for Bootstrap
 date: '2018-02-11T15:31:24+11:00'
 featured: /img/uploads/featured-image-sass-media-query-mixins.jpg
 categories:
-  - development
+  - literature
 featured_opacity: '.15'
 dark_bg: true
 toc: true
