@@ -1,0 +1,87 @@
+
+
+//
+//  BOOTSTRAP 4 GRID
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@-ms-viewport {
+  width: device-width;
+}
+
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $gutter;
+  padding-right: $gutter;
+  position: relative;
+}
+
+@include respond-above(xs) {
+  .container {
+    max-width: 100%;
+    width: 540px;
+  }
+}
+
+@include respond-above(sm) {
+  .container {
+    max-width: 100%;
+    width: 720px;
+  }
+}
+
+@include respond-above(md) {
+  .container {
+    max-width: 100%;
+    width: 960px;
+  }
+}
+
+@include respond-above(lg) {
+  .container {
+    max-width: 100%;
+    width: 1140px;
+  }
+}
+
+.container-fluid {
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: $gutter;
+  padding-left: $gutter;
+  position: relative;
+}
+
+.row {
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -$gutter;
+  margin-left: -$gutter;
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.no-gutters>.col,
+.no-gutters>[class*="col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}

@@ -1,0 +1,87 @@
+<!--
+//
+//  HEAD
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+-->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ .Description }}">
+  <title>{{ if not .IsHome }}{{ if eq .Title "nba" }}NBA{{ else }}{{ if and (eq .Type "work") (eq .Kind "section") }}Work{{ else if eq .Type "categories" }}{{ title .Title }}{{ else }}{{ .Title }}{{ end }}{{ end }} - {{ end }}{{ .Site.Title }}</title>
+  
+
+  {{ partial "header/head-styles" . }}
+  
+  <!-- Favicons. -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/favicon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/favicon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/favicon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/favicon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileImage" content="/img/favicon/mstile-144x144.png">
+
+  
+  <!-- Social tags. -->
+  {{ if and (eq .Type "articles") (eq .Kind "page") }}
+  <meta name="twitter:card" content="summary_large_image">
+  {{ else }}
+  <meta name="twitter:card" content="summary">
+  {{ end }}
+  <meta name="twitter:site" content="@lenymo">
+  <meta name="twitter:creator" content="@lenymo">
+  <meta property="og:type" content="website" />
+  <meta content="{{ .Site.Data.site_settings.production_url }}{{ .Permalink }}" property="og:url" />
+  <meta content="{{ .Site.Data.site_settings.production_url }}{{ .Permalink }}" property="twitter:url" />
+  <meta name="twitter:title" property="og:title" content="{{ .Title }}" />
+  
+  {{ $production_url := $.Site.Data.site_settings.production_url }}
+  {{/*  Featured image.  */}}
+  {{ with .Params.featured }}
+    <meta property="og:image" content="{{ $production_url }}{{ . }}" />
+    <meta name="twitter:image" content="{{ $production_url }}{{ . }}" />
+  {{ end }}
+    
+  {{/*  Featured images using Hugo Page Resources.  */}}
+  {{ if and (eq .Type "photography") (eq .Kind "page") }}
+    {{ with (.Resources.ByType "image") }}
+      {{ range . }}
+
+        {{ $social := (.Fill "1200x630 q100").RelPermalink }}
+        <meta property="og:image" content="{{ $production_url }}{{ $social }}" />
+        <meta name="twitter:image" content="{{ $production_url }}{{ $social }}" />
+        
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  
+  {{/*  Description.  */}}
+  {{ if and (eq .Type "articles") (eq .Kind "page") }}
+    {{/*  Articles.  */}}
+    {{ $truncated := .Summary | truncate 190 "" }}
+    {{ $summary := .Summary | markdownify }}
+    <meta name="description" content="{{ if gt (len .Summary | markdownify ) (len $truncated | markdownify) }}{{ $truncated }}...{{ else }}{{ $summary }}{{ end }}" />
+    <meta name="twitter:description" property="og:description" content="{{ if gt (len .Summary | markdownify ) (len $truncated | markdownify) }}{{ $truncated }}...{{ else }}{{ $summary }}{{ end }}" />
+  {{/*  Photography.  */}}
+  {{ else if and (eq .Type "photography") (eq .Kind "page") }}
+    {{ $truncated := .Summary | truncate 190 "" }}
+    {{ $summary := .Summary | markdownify }}
+    <meta name="description" content="{{ if gt (len .Summary | markdownify ) (len $truncated | markdownify) }}{{ $truncated }}...{{ else }}{{ $summary }}{{ end }}" />
+    <meta name="twitter:description" property="og:description" content="{{ if gt (len .Summary | markdownify ) (len $truncated | markdownify) }}{{ $truncated }}...{{ else }}{{ $summary }}{{ end }}" />
+  {{ else }}
+    <!-- Everything else. -->
+    {{ if isset .Params "description" }}
+    <meta name="description" content="{{ .Params.description }}" />
+    <meta name="twitter:description" property="og:description" content="{{ .Params.description }}" />
+    {{ else }}
+    <meta name="description" content="{{ .Site.Title }}" />
+    <meta name="twitter:description" property="og:description" content="{{ .Site.Title }}" />
+    {{ end }}
+  {{ end }}
+
+  {{ if .IsHome }}
+  <meta name="google-site-verification" content="XaWu3p0Ng9DZO8OWVw7EEPUIhz-tJ_JZ5hjUWax3ejg" />
+  {{ end }}
+
+</head>
+  

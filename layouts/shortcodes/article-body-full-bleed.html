@@ -1,0 +1,25 @@
+<!--
+//
+//  ARTICLE BODY FULL BLEED
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+Params:
+container="yes" // Leave blank for no container.
+
+-->
+
+      </div><!-- .article-body__content -->
+    </div><!-- .col -->
+  </div><!-- .row -->
+</div><!-- .container -->
+
+<div class="article-body__full-bleed">
+  {{ if .Get "container" }}<div class="container">{{ end }}
+    {{ .Inner | markdownify }}
+  {{ if .Get "container" }}</div>{{ end }}
+</div><!-- .article-full-bleed -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+      <div class="article-body__content">

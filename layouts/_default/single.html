@@ -1,0 +1,23 @@
+{{ partial "header/head" . }}
+
+<body class="{{ .Title | urlize }}{{ with .Params.custom_class }} page-{{ . }}{{ end }}">
+
+  {{ partial "header/header" . }}
+
+  {{ partial "page-header" . }}
+
+  <section class="section">
+    <div class="container">
+      <div class="row">
+
+        {{ .Content }}
+
+      </div><!-- .row -->
+    </div><!-- .container -->
+  </section><!-- .section__articles-summary -->
+
+  {{ partial "footer/footer" . }}
+
+{{ partial "footer/foot" . }}
+  
+</body>

@@ -1,0 +1,15 @@
+{{ partial "header/head" . }}
+
+<body class="category category-{{ .Title | urlize }}">
+
+  {{ partial "header/header" . }}
+
+  {{ partial "page-header" . }}
+
+  {{ partial "section-articles-summary" . }}
+
+  {{ partial "footer/footer" . }}
+
+{{ partial "footer/foot" . }}
+  
+</body>

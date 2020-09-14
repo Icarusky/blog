@@ -1,0 +1,20 @@
+<!--
+//
+//  IMG
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+Params:
+src="URL"
+lqip="URL"
+alt="description of image"
+-->
+
+<div class="photography-image lqip__figure" data-full="{{ .src }}" style="overflow: hidden;">
+  <div class="photography-image__img-wrapper lqip__wrapper">
+    <img 
+      class="photography-image__lqip lqip" 
+      src="{{ .lqip }}" {{ with .alt }}alt="{{ . }}"{{ end }}
+      style="filter: blur(50px) saturate(75%); width: {{ .width }}px; max-width: 100%;"
+    >
+  </div>
+</div>

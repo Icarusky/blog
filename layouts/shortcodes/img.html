@@ -1,0 +1,46 @@
+<!--
+//
+//  IMG
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+Params:
+src="URL"
+alt="description of image"
+caption="caption"
+url="http://"
+class=""
+-->
+{{ if in (.Get "src") ".jpg" }}
+  {{ $src := .Get "src" }}
+
+  {{ $lqip := replace $src ".jpg" "-lqip.jpg" }}
+  {{ $.Scratch.Set "lqip" $lqip }}
+
+  {{ $sqip := replace $src ".jpg" ".svg" }}
+  {{ $.Scratch.Set "sqip" "/static" }}
+  {{ $.Scratch.Add "sqip" $sqip }}
+
+{{ end }}
+
+{{ if in (.Get "src") ".png" }}
+  {{ $src := .Get "src" }}
+
+  {{ $lqip := replace $src ".png" "-lqip.jpg" }}
+  {{ $.Scratch.Set "lqip" $lqip }}
+
+  {{ $sqip := replace $src ".png" ".svg" }}
+  {{ $.Scratch.Set "sqip" "/static" }}
+  {{ $.Scratch.Add "sqip" $sqip }}
+
+{{ end }}
+<figure class="img-shortcode lqip__figure{{ if .Get "class" }} {{ .Get "class" }}{{ end }}" data-full="{{ .Get "src" }}" style="overflow: hidden;">
+  <div class="img-shortcode__img-wrapper lqip__wrapper">
+    <img 
+      class="img-shortcode__img-lqip lqip"
+      src="{{ $.Scratch.Get "lqip" }}" {{ if .Get "alt" }}alt="{{ .Get "alt" }}"{{ end }}
+      style="filter: blur(50px) saturate(75%);"
+    >
+  </div>
+  {{ if .Get "caption" }}<figcaption class="img-shortcode__caption">
+    <p class="img-shortcode__caption-text">{{ .Get "caption" | markdownify }}</p>
+  </figcaption>{{ end }}</figure>

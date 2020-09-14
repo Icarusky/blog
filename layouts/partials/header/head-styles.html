@@ -1,0 +1,71 @@
+<!--
+//
+//  HEAD STYLES
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+-->
+
+
+<!--
+//
+//  GENERIC CRITICAL CSS
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+-->
+{{ $critical_css_hash := (index .Site.Data.css.hash "critical.css") }}
+{{ $critical_css_path := (printf "static/css/%s" $critical_css_hash) }}
+
+<style rel="stylesheet">{{ readFile $critical_css_path | safeCSS }}</style>
+
+
+<!--
+//
+//  PAGE-SPECIFIC CRITICAL CSS
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+-->
+<!-- Single article -->
+{{ if and (eq .Type "articles") (eq .Kind "page") }}
+<style rel="stylesheet">{{ readFile "/static/css/critical/articles/index.css" | safeCSS }}</style>
+<!-- <link rel="stylesheet" href="{{ .Site.BaseURL }}css/critical/articles/index.css" /> -->
+
+<!-- Contact -->
+{{ else if and (eq .Type "contact") (eq .Kind "section") }}
+<!-- <link rel="stylesheet" href="{{ .Site.BaseURL }}css/critical/contact/index.css" /> -->
+<style rel="stylesheet">{{ readFile "/static/css/critical/contact/index.css" | safeCSS }}</style>
+
+<!-- About -->
+{{ else if and (eq .Type "about") (eq .Kind "section") }}
+<style rel="stylesheet">{{readFile "/static/css/critical/about/index.css" | safeCSS}}</style>
+
+<!-- Photography index -->
+{{ else if and (eq .Type "photography") (eq .Kind "section") }}
+<style rel="stylesheet">{{readFile "/static/css/critical/photography/index.css" | safeCSS}}</style>
+
+<!-- Single photography -->
+{{ else if and (eq .Type "photography") (eq .Kind "page") }}
+<style rel="stylesheet">{{readFile "/static/css/critical/single-photography/index.css" | safeCSS}}</style>
+
+<!-- Home / article listing / category -->
+{{ else }}
+<meta name="article-index">
+<style rel="stylesheet">{{ readFile "/static/css/critical/index.css" | safeCSS }}</style>
+<!-- <link rel="stylesheet" href="{{ .Site.BaseURL }}css/critical/index.css" /> -->
+{{ end }}
+
+
+<!-- Manual critical CSS. -->
+<!-- <link rel="stylesheet" href="{{ .Site.BaseURL }}css/{{ index .Site.Data.css.hash "critical.css" }}" /> -->
+
+{{ with .Params.page_header_bg_color }}
+<style type="text/css">
+  .section__page-header {
+    background-color: {{ . }} !important;
+  }
+</style>
+{{ end }}
+
+{{ with .Params.featured_opacity }}
+<style type="text/css">
+  .page-header__featured-image {
+    opacity: {{ . }} !important;
+  }
+</style>
+{{ end }}

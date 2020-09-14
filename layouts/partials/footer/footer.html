@@ -1,0 +1,46 @@
+<!--
+//
+//  FOOTER
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+-->
+</div><!-- .site -->
+
+<footer class="site-footer">
+  <section class="site-footer__top">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="site-footer__social-links">
+            {{ partial "social-links" . }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="site-footer__bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <p class="site-footer_developer-credits">
+            Built using <a href="https://gohugo.io/">Hugo</a> v{{ hugo.Version }}.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <small class="site-footer__copyright">
+            Copyright &copy; {{ now.Format "2006" }} {{ .Site.Copyright }}
+          </small>
+        </div>
+      </div>
+    </div>
+  </section><!-- .footer-bottom -->
+</footer><!-- .site-footer -->
