@@ -1,0 +1,31 @@
+---
+label: Work Template
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: datetime
+  name: date
+  label: date
+- type: file
+  name: featured
+  label: featured
+- type: file
+  name: tile_image
+  label: tile_image
+- type: text
+  name: summary
+  label: summary
+- type: text
+  name: custom_class
+  label: custom_class
+- type: text
+  name: custom_stylesheet
+  label: custom_stylesheet
+- type: boolean
+  name: dark_bg
+  label: dark_bg
+- type: text
+  name: page_header_bg_color
+  label: page_header_bg_color
