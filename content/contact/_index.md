@@ -8,4 +8,4 @@ description: Get in touch with me using the form on this page or on the social m
   (I'm on most of them).
 
 ---
-Please contact me by mailing to i@icarusky.com.
+Please contact with me by mailing to i@icarusky.com.
