@@ -1,0 +1,25 @@
+---
+label: Articles Template
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: datetime
+  name: date
+  label: date
+- type: file
+  name: featured
+  label: featured
+- type: list
+  name: categories
+  label: categories
+- type: text
+  name: featured_opacity
+  label: featured_opacity
+- type: boolean
+  name: dark_bg
+  label: dark_bg
+- type: boolean
+  name: toc
+  label: toc
