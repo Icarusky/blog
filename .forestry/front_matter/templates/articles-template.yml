@@ -25,3 +25,4 @@ fields:
   label: toc
 pages:
 - content/articles/this-is-a-test-page-can-you-see-it.md
+- content/articles/中文测试.md
