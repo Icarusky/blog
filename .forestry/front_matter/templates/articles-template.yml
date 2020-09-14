@@ -23,5 +23,3 @@ fields:
 - type: boolean
   name: toc
   label: toc
-pages:
-- content/articles/test-for-physics.md
