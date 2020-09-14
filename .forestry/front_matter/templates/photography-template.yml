@@ -1,0 +1,25 @@
+---
+label: Photography Template
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: file
+  name: featured
+  label: featured
+- type: text
+  name: custom_class
+  label: custom_class
+- type: boolean
+  name: transparent_header
+  label: transparent_header
+- type: number
+  name: featured_opacity
+  label: featured_opacity
+- type: boolean
+  name: dark_bg
+  label: dark_bg
+- type: text
+  name: page_header_sub_title
+  label: page_header_sub_title
