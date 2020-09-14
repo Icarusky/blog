@@ -1,7 +1,7 @@
 ---
 
 slug = ""
-Author = "Glenn McComb"
+Author = "Icarusky"
 description = ""
 resources = []
 
