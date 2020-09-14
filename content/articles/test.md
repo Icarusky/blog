@@ -4,7 +4,7 @@ date: '2018-02-11T15:31:24+11:00'
 featured: "/img/uploads/timg-2.jpg"
 categories:
   - development
-featured_opacity: '.15'
+featured_opacity: '.20'
 dark_bg: true
 toc: true
 ---
