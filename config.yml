@@ -28,20 +28,20 @@ menu:
       Weight: '130'
       parent: "articles"
 
-    - Identifier: zagan
+    - Identifier: rambling
       Name: 杂谈
-      URL: /categories/zagan/
+      URL: /categories/rambling/
       Weight: '140'
       parent: "articles"
 
     - Identifier: photography
       Name: 摄影
       URL: /photography/
-      Weight: '30'
+      Weight: '20'
 
-    - Identifier: work
-      Name: 工作
-      URL: /work/
+    - Identifier: friends
+      Name: 友链
+      URL: /friends/
       Weight: '30'
 
     - Identifier: about

@@ -1,0 +1,32 @@
+{{ partial "header/head" . }}
+
+<body class="{{ .Title | urlize }}{{ with .Params.custom_class }} page-{{ . }}{{ end }}{{ with .Params.transparent_header }} -has-transparent-site-header{{ end }}">
+
+  {{ partial "header/header" . }}
+
+  {{ partial "page-header" . }}
+
+  <div id="react-root"></div>
+
+  <section class="section section__article-body">
+    <article class="article-body">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+          
+          <div class="article-body__content">
+            {{ .Content }}
+          </div>
+
+          </div><!-- .col -->
+        </div><!-- .row -->
+      </div><!-- .container -->
+    </article><!-- .article-body -->
+  </section><!-- .section__article-body -->
+
+  {{ partial "footer/footer" . }}
+
+  
+{{ partial "footer/foot" . }}
+
+</body>

@@ -14,7 +14,7 @@ Whether you're using full-blown Bootstrap or just leveraging the familiar grid t
 
 They're also versatile and work well even with your own custom naming conventions and breakpoints. If you want to see the full code snippet, [jump straight to it](#the-entire-code).
 
-## What do the mixins do?
+## What do the mixins do? 
 
 They provide a semantic media query mixin for the following:
 

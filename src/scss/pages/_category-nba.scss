@@ -1,40 +1,40 @@
 
 
 //
-//  CATEGORY - ZAGAN
+//  CATEGORY - RAMBLING
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-// $page-header-bg-zagan: #a93f25; // Spalding orange.
-$page-header-bg-zagan: #802e1a; // Spalding orange (darker).
+// $page-header-bg-rambling: #a93f25; // Spalding orange.
+$page-header-bg-rambling: #802e1a; // Spalding orange (darker).
 
-$page-header-zagan-icon-color: lighten($page-header-bg-zagan, 25%);
-$page-header-zagan-icon-shadow: darken($page-header-zagan-icon-color, 35%);
+$page-header-rambling-icon-color: lighten($page-header-bg-rambling, 25%);
+$page-header-rambling-icon-shadow: darken($page-header-rambling-icon-color, 35%);
 
 
 //
 //  PAGE HEADER
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-.category-zagan {
+.category-rambling {
   .section__page-header {
-    background-color: $page-header-bg-zagan;
-    background-image: url('/img/uploads/featured-image-category-zagan.png');
+    background-color: $page-header-bg-rambling;
+    background-image: url('/img/uploads/featured-image-category-rambling.png');
   }
 
   .page-header__icon {
-    background-color: $page-header-bg-zagan;
-    border-color: $page-header-bg-zagan;
+    background-color: $page-header-bg-rambling;
+    border-color: $page-header-bg-rambling;
   }
 
   .section__page-header {
     .page-header__background-device {
       .line {
-        background-color: $page-header-bg-zagan;
+        background-color: $page-header-bg-rambling;
       }
     }
   }
 
-  // Make sure zagan is all uppercase.
+  // Make sure rambling is all uppercase.
   .page-header__title {
     text-transform: uppercase;
   }
@@ -45,9 +45,9 @@ $page-header-zagan-icon-shadow: darken($page-header-zagan-icon-color, 35%);
 //  BASKETBALL ICON
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-.category-zagan {
+.category-rambling {
   .page-header__icon {    
-    background: $page-header-bg-zagan;
+    background: $page-header-bg-rambling;
 
     .basketball {
       height: 100%;
@@ -58,7 +58,7 @@ $page-header-zagan-icon-shadow: darken($page-header-zagan-icon-color, 35%);
 
       .outlines {
         path {
-          fill: $page-header-zagan-icon-color;
+          fill: $page-header-rambling-icon-color;
         }
       }
 
@@ -71,7 +71,7 @@ $page-header-zagan-icon-shadow: darken($page-header-zagan-icon-color, 35%);
 
         .outlines {
           path {
-            fill: $page-header-zagan-icon-shadow;
+            fill: $page-header-rambling-icon-shadow;
           }
         }
 
@@ -88,7 +88,7 @@ $page-header-zagan-icon-shadow: darken($page-header-zagan-icon-color, 35%);
 //  BASKETBALL COURT ICON
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-// .category-zagan {
+// .category-rambling {
 //   .page-header__icon {
 //     .basketball-court {
 //       position: absolute;
